@@ -12,14 +12,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout this repo.
+      uses: actions/checkout@v2
+      with:
+        path: main
+    - name: Checkout testing scripts
+      uses: actions/checkout@v2
+      with:
+        repository: MultiRobotControl/hw_checker
+        path: hw_checker
+        ref: main
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 2.7
-    - uses: actions/checkout@main
-      with:
-        repository: MultiRobotControl/hw_checker
     - name: ls
       run: |
         ls -la
