@@ -1,0 +1,18 @@
+name: hw_checker
+on: push
+jobs:
+	hello_git_world:
+		name: New line in file?
+		runs-on: ubuntu-latest
+		steps:
+		- uses: actions/checkout@v2
+		- uses: actions/setup-python@v2
+		  with:
+			python-version: 2.7
+		- name: Display Python version
+		  	run: python -c "import sys; print(sys.version)"
+  		- name: Display the path
+			run: |		
+			     import os		    
+			     print(os.environ['PATH'])
+			shell: python
