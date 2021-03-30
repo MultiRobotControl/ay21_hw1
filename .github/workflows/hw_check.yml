@@ -1,9 +1,10 @@
-name: hw_checker
+name: Python application
 
 on: push
 
+
 jobs:
-  hw1check:
+  build:
 
 		runs-on: ubuntu-latest
 
