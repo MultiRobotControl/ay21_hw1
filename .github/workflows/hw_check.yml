@@ -1,9 +1,12 @@
 name: hw_checker
+
 on: push
+
 jobs:
-	hello_git_world:
-		name: New line in file?
+	hw1-check:
+		name: New line in file
 		runs-on: ubuntu-latest
+		
 		steps:
 		- uses: actions/checkout@v2
 		- uses: actions/setup-python@v2
