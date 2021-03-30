@@ -15,23 +15,24 @@ jobs:
     - name: Checkout this repo.
       uses: actions/checkout@v2
       with:
-        path: main
+        path: ay21_hw1
     - name: Checkout testing scripts
       uses: actions/checkout@v2
       with:
         repository: MultiRobotControl/hw_checker
         path: hw_checker
         ref: main
-    - name: Set up Python 3.9
+    - name: Set up Python 2.7
       uses: actions/setup-python@v2
       with:
         python-version: 2.7
-    - name: ls
+    #- name: ls
+    #  run: |
+    #    ls -la hw
+    #    ls -la hw_checker
+    #  shell: bash
+    - name: Run python hw checker
       run: |
-        ls -la
-        pwd
-        ls ..
-      shell: bash
-    - name: Display Python version
-      run: python -c "import sys; print(sys.version)"
+        cd ./hw_checker
+        python hw1_test.py
     
