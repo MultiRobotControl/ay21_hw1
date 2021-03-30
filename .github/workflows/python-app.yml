@@ -7,7 +7,7 @@ on: push
 
 
 jobs:
-  build:
+  check-hw:
 
     runs-on: ubuntu-latest
 
@@ -21,7 +21,7 @@ jobs:
       with:
         repository: MultiRobotControl/hw_checker
     - name: ls
-      run: ls ./hw_checker
+      run: ls -la
       shell: bash
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
