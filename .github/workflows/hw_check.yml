@@ -3,7 +3,7 @@ name: hw_checker
 on: push
 
 jobs:
-	hw1check:
+  hw1check:
 
 		runs-on: ubuntu-latest
 
