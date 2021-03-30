@@ -17,6 +17,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 2.7
+    - uses: actions/checkout@main
+      with:
+        repository: MultiRobotControl/hw_checker
+    - name: ls
+      run: ls ./hw_checker
+      shell: bash
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
     
