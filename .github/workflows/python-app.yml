@@ -21,7 +21,10 @@ jobs:
       with:
         repository: MultiRobotControl/hw_checker
     - name: ls
-      run: ls -la
+      run: |
+        ls -la
+        pwd
+        ls ..
       shell: bash
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
